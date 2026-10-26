@@ -16,8 +16,8 @@ export type Challenge = {
    * ![alt](/challenges/<slug>/img.png), bare https:// links.
    */
   description: string;
-  /** Server-side only. Never sent to the browser. */
-  flag: string;
+  /** Server-side only. Never sent to the browser. A list accepts any of its entries. */
+  flag: string | string[];
   /** Match flag ignoring case. Default false. */
   caseInsensitive?: boolean;
   hints?: string[];

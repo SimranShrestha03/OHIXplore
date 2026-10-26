@@ -3,7 +3,7 @@ import type { Challenge } from "../types";
 const challenge: Challenge = {
   slug: "survey",
   title: "Survey",
-  points: 50,
+  points: 100,
   order: 0,
   description: `*You participated in the OHIXplore CTF 🔥 and engaged with intent. Now be honest, tell us about your experience, & how we can improve content.*
 
