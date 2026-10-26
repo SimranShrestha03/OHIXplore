@@ -1,69 +1,30 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="landing">
+      <h1>WELCOME TO THE OHI XPLORE CTF</h1>
+      <p className="sub">Online Health Information Exploration Challenges</p>
+      <p className="lead">
+        Train your problem-solving skills, explore OHI topics, including misinfo concepts, and work on
+        hands-on challenges designed to help you learn by doing.
+      </p>
+      <Link href="/challenges" className="btn">Enter Challenges</Link>
+
+      <section className="brief">
+        <h2>MISSION BRIEF</h2>
+        <p className="brief-sub">Cadet, your assistance is required.</p>
+        <p>
+          Our communication channels have detected a series of OHI related misinformation spreading
+          attempts as part of a malicious campaign - the Distortion Protocol. We need capable agents to
+          investigate, identify the misinformation plus fake claims, which are being circulated, and
+          discover the truth among the false propaganda before further damage is done. Each challenge
+          represents a real-world scenario. Analyze the evidence, adapt your approach, and extract the
+          flag. Your mission is simple: observe carefully, look out for the distortions, that is the
+          disformed information components, look for noise patterns, unearth the truth and stay aware.
+        </p>
+        <p className="brief-foot">Start in the <b>Enter Challenges</b> tab/button option.</p>
+      </section>
+    </main>
   );
 }
