@@ -13,11 +13,11 @@ The Distortion Network (DN) didn't spread false information. They just reused a 
 
 Use the link to the website below & check it out exactly as the public sees info there. https://openvaers.com/covid-data
 
-![OpenVAERS COVID data page|440](/challenges/misinterpretation/openvaers.png)
-
 On the above webpage, do a thorough review. Look carefully under the disclaimer view. Read the VAERS data related key consideration & limitation. Find out who is assigned responsibility & give your full attention.
 
-According to the disclaimer, where are further studies conducted if a safety signal is found in VAERS? The answer to the above question is your flag here. **Your answer should be in abbreviated form separated by a comma, with no spaces.**`,
+According to the disclaimer, where are further studies conducted if a safety signal is found in VAERS? The answer to the above question is your flag here. **Your answer should be in abbreviated form separated by a comma, with no spaces.**
+
+![OpenVAERS COVID data page|450|block](/challenges/misinterpretation/openvaers.png)`,
   flag: "VSD,CISA",
   caseInsensitive: true,
 };

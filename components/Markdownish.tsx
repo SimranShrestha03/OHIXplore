@@ -11,14 +11,14 @@ function inline(text: string): ReactNode[] {
     if (m.index! > last) out.push(text.slice(last, m.index));
     const key = i++;
     if (m[2]) {
-      // "![alt|420](url)" caps the image width at 420px.
-      const [alt, w] = m[1].split("|");
+      // "![alt|420](url)" caps the width at 420px; "![alt|420|block](url)" also centers it on its own line.
+      const [alt, w, mode] = m[1].split("|");
       out.push(
         <a key={key} href={m[2]} target="_blank" rel="noreferrer" title="Open full size">
           <img
             src={m[2]}
             alt={alt}
-            className="md-img"
+            className={mode === "block" ? "md-img md-block" : "md-img"}
             style={w ? { maxWidth: `${w}px`, maxHeight: "none" } : undefined}
           />
         </a>,
