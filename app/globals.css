@@ -6,24 +6,23 @@
   --grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--text); font-family: Lato, "Helvetica Neue", Arial, sans-serif; }
+html, body { margin: 0; background: radial-gradient(ellipse at 50% 0%, #10303a 0%, #0a1620 55%, #060b12 100%) fixed, var(--bg); color: var(--text); font-family: Lato, "Helvetica Neue", Arial, sans-serif; }
 a { color: #6aa9ff; }
 
-.navbar { background: #0c121e; border-bottom: 1px solid #1a2535; height: 58px; }
+.navbar { position: relative; background: rgba(12,18,30,.75); backdrop-filter: blur(6px); border-bottom: 1px solid #1a2535; height: 58px; }
 .navbar-inner { max-width: 1320px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; gap: 36px; }
 .brand { color: #fff; font-size: 26px; text-decoration: none; }
 .nav-link { color: var(--teal); text-decoration: none; font-size: 15px; }
 
-.landing { max-width: 900px; margin: 0 auto; padding: 100px 24px 80px; text-align: center; }
+.landing { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 100px 24px 80px; text-align: center; }
 .landing h1 { font-size: 34px; letter-spacing: 2px; margin: 0 0 24px; }
 .sub { font-size: 20px; margin: 0 0 32px; }
 .lead { color: #e6e9ef; line-height: 1.7; max-width: 780px; margin: 0 auto 36px; }
 button.btn { border: 0; cursor: pointer; font-family: inherit; }
 .btn { display: inline-block; background: var(--grad); color: #fff; padding: 12px 18px; border-radius: 6px; font-weight: 700; font-size: 18px; text-decoration: none; }
 
-.challenges-page { position: relative; overflow: hidden; min-height: calc(100vh - 58px); background: radial-gradient(ellipse at 50% 0%, #10303a 0%, #0a1620 55%, #060b12 100%); display: flex; flex-direction: column; }
-.challenges-page > :not(.bg-anim):not(.modal-backdrop) { position: relative; z-index: 1; }
-.challenges-hero { padding: 24px; text-align: center; background: rgba(8,16,26,.6); border-bottom: 1px solid #1a2535; }
+.challenges-page { position: relative; z-index: 1; min-height: calc(100vh - 58px); display: flex; flex-direction: column; }
+.challenges-hero { padding: 24px; text-align: center; background: rgba(8,16,26,.35); border-bottom: 1px solid #1a2535; }
 .challenges-hero h1 { font-weight: 400; font-size: 46px; margin: 0; letter-spacing: 2px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px; max-width: 1080px; margin: 70px auto 0; padding: 0 24px; width: 100%; }
 .tile { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 78px; background: var(--grad); color: #fff; text-decoration: none; text-align: center; padding: 0 12px; border-radius: 4px; font-size: 14px; box-shadow: 0 0 14px rgba(102,126,234,.35); transition: transform .12s, filter .12s; }
@@ -65,7 +64,7 @@ button.btn { border: 0; cursor: pointer; font-family: inherit; }
 .brief-body p { margin: 0 0 14px; }
 .brief-actions { margin-top: 24px; }
 
-.bg-anim { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.bg-anim { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
 .bg-anim canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .bg-orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .45; will-change: transform; }
 .bg-orb-1 { width: 520px; height: 520px; background: #2a9d9a; top: -120px; left: -80px; animation: drift1 22s ease-in-out infinite alternate; }

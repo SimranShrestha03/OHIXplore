@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
       <body>
+        <AnimatedBackground />
         <Navbar />
         {children}
       </body>
