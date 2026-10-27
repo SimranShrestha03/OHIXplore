@@ -66,7 +66,6 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
             className={`tile${solved.includes(c.slug) ? " solved" : ""}`}
           >
             <span>{c.title}</span>
-            <span>{c.points}</span>
           </a>
         ))}
       </div>
