@@ -19,19 +19,19 @@ export default function EnterChallenges() {
 
             <div className="brief-body">
               <p>
-                <strong>The threat:</strong> The Distortion Network (DN) is spreading online health
+                The Distortion Network (DN) is spreading online health
                 misinformation as part of a malicious campaign called the <em>Distortion Protocol</em>.
               </p>
               <p>
-                <strong>Who you are:</strong> Agent VERITY, recruited by the Global Health Intelligence
+                You are Agent VERITY, recruited by the Global Health Intelligence
                 Agency (GHIA) as the last line of defense against health misinformation.
               </p>
               <p>
-                <strong>What you will do:</strong> Each challenge is a real-world scenario. Analyze the
+                Each challenge is a real-world scenario. Analyze the
                 evidence, trace claims to their source, spot the manipulation, and extract the flag.
               </p>
               <p>
-                <strong>Your mission:</strong> Observe carefully, look out for the distortions, unearth
+                Observe carefully, look out for the distortions, unearth
                 the truth and stay aware.
               </p>
             </div>

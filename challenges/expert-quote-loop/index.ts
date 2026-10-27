@@ -24,8 +24,7 @@ GHIA traced the claim and found this following pattern:
 **Your Task:** You are not judging or finding out as to whether the quote is true or not. Identify the action or technique behind the credibility manufacturing plot. The DN actually creates an illusion of verification, When media outlets cite each other in a looping action. Here credibility is built on a 'mirrors facing mirrors' theme. Therein lies the whole trick and the grand scheme. Verification exists - this is what people are being made to believe everyday. This is only because of what others - the experts apparently quote & say.
 
 What action/technique/scheme is at work here? Break the loop, and identify it, as it is the reason behind this problem pattern. That name of this action or technique is your flag. Submit that name as your answer.`,
-  // TODO confirm intended answer; any entry in the list is accepted.
-  flag: ["Circular Reporting", "Circular Citation", "Circular Sourcing", "Citogenesis"],
+  flag: "Circular reporting",
   caseInsensitive: true,
 };
 

@@ -26,8 +26,7 @@ For solving this challenge and for finding the flag, solve one of these followin
 **Or**
 
 *Published articles can be rescinded. Headlines or titles can be mended, But citations still point somewhere. Locate the anchor or source that points there. This is the identifier that a citation link does bear.*`,
-  // TODO confirm intended answer (DOI vs rs-100956); any entry in the list is accepted.
-  flag: ["10.21203/rs.3.rs-100956/v1", "10.21203/rs.3.rs-100956", "rs-100956", "rs.3.rs-100956", "DOI"],
+  flag: "DOI",
   caseInsensitive: true,
 };
 

@@ -34,6 +34,13 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
     setOpen(null);
   };
 
+  const idx = open ? challenges.findIndex((c) => c.slug === open.slug) : -1;
+  const nextChallenge = idx >= 0 ? challenges[idx + 1] : undefined;
+  const goNext = () => {
+    if (nextChallenge) location.hash = nextChallenge.slug;
+    else close();
+  };
+
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!open || !flag.trim()) return;
@@ -102,7 +109,14 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
               <button type="submit" disabled={busy}>Submit</button>
             </form>
             {result && (
-              <div className={`result ${result.status}`}>{result.message}</div>
+              <div className={`result ${result.status}`}>
+                {result.status === "correct" ? "Correct! You did it! 🎉" : result.message}
+                {result.status === "correct" && (
+                  <button className="next-btn" onClick={goNext}>
+                    {nextChallenge ? "Next Challenge →" : "Back to Challenges"}
+                  </button>
+                )}
+              </div>
             )}
           </div>
         </div>

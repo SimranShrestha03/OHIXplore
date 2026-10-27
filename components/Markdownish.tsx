@@ -10,7 +10,11 @@ function inline(text: string): ReactNode[] {
   for (const m of text.matchAll(TOKEN)) {
     if (m.index! > last) out.push(text.slice(last, m.index));
     const key = i++;
-    if (m[2]) out.push(<img key={key} src={m[2]} alt={m[1]} className="md-img" />);
+    if (m[2]) out.push(
+      <a key={key} href={m[2]} target="_blank" rel="noreferrer" title="Open full size">
+        <img src={m[2]} alt={m[1]} className="md-img" />
+      </a>,
+    );
     else if (m[4]) out.push(<a key={key} href={m[4]} target="_blank" rel="noreferrer">{m[3]}</a>);
     else if (m[5]) out.push(<strong key={key}>{m[5]}</strong>);
     else if (m[6]) out.push(<em key={key}>{m[6]}</em>);
@@ -24,7 +28,13 @@ function inline(text: string): ReactNode[] {
 export default function Markdownish({ text }: { text: string }) {
   return (
     <>
-      {text.split(/\n\s*\n/).map((para, i) => (
+      {text.split(/\n\s*\n/).map((para, i) => {
+        const lines = para.split("\n");
+        // A paragraph made only of images (one per line) renders side by side.
+        if (lines.length > 1 && lines.every((l) => /^!\[[^\]]*\]\([^)]+\)$/.test(l.trim()))) {
+          return <div key={i} className="md-gallery">{lines.map((l, j) => <Fragment key={j}>{inline(l.trim())}</Fragment>)}</div>;
+        }
+        return (
         <p key={i}>
           {para.split("\n").map((line, j) => (
             <Fragment key={j}>
@@ -33,7 +43,8 @@ export default function Markdownish({ text }: { text: string }) {
             </Fragment>
           ))}
         </p>
-      ))}
+        );
+      })}
     </>
   );
 }

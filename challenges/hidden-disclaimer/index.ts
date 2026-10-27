@@ -18,8 +18,7 @@ You may try to figure out the original message by shifting letters until the hid
 **Submit the decoded message in ALL CAPS (as your flag here), exactly as written, with spaces preserved.**
 
 QVFPYNVZRE: ABANQIVFBEL`,
-  // ROT13 of the ciphertext; flag shown is the decoded text.
-  flag: ["DISCLAIMER: NONADVISORY", "DISCLAIMER NONADVISORY"],
+  flag: "DISCLAIMER: NONADVISORY",
   caseInsensitive: true,
 };
 

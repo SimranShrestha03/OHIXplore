@@ -22,8 +22,8 @@ A magnet sticks to the COVID-19 vaccine injection area. Millions believe that th
 This is not random.
 
 ![Viral magnet challenge post](/challenges/magnet-claim/magnet-post.png)`,
-  // TODO: question text was cut off before the actual ask; add it above and set the real flag.
-  flag: "OHIX{TODO_magnet_claim}",
+  flag: "0",
+  caseInsensitive: true,
 };
 
 export default challenge;

@@ -13,17 +13,15 @@ GHIA analysts have intercepted a polished health infographic circulating inside 
 
 GHIA intercepted a health infographic shared inside this closed community, and this infographic image is shared with you below.
 
-![Intercepted health infographic](/challenges/decoration-signal/infographic.png)
-
 Nothing in this infographic text appears false & it has no policy violations. Nothing looks encoded, & yet, group members are enjoying signal receptions. The signal itself is being used as a graphic pattern design. It looks like they have found a way of deception - really fine.
 
-Analyze the visual patterns in this image above & figure out the signal design. Decode the hidden message embedded in the decorative elements & shine.
+Analyze the visual patterns in this image & figure out the signal design. Decode the hidden message embedded in the decorative elements & shine.
 
+![Intercepted health infographic](/challenges/decoration-signal/infographic.png)
 ![Reference chart](/challenges/decoration-signal/morse-chart.png)
 
 **Submit the decoded message in ALL CAPS as your flag here.**`,
-  // Morse in the subtitle: ... - .- -.-- / .- .-- .- .-. .
-  flag: ["STAY AWARE", "STAYAWARE"],
+  flag: "STAY AWARE",
   caseInsensitive: true,
 };
 

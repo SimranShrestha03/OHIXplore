@@ -23,8 +23,8 @@ Here is the article as it exists today: https://pubmed.ncbi.nlm.nih.gov/37534766
 The above webpage clearly signals a wrong deed. GHIA analysts recognize that there is a problem indeed. The retract terminology is used when a publication's credibility is dead. This article still exists & gets cited, but the database marked it with a flag in red. When did the PubMed retract this study with a withdrawal action? That date is your flag here in the context of this quiet retraction.
 
 That date, as referred to in the above question, is your flag here in the following format: **YYYY-MM-DD** (submit your answer only in this date format)`,
-  // PMID 37534766; retraction statement (PMID 41544074) indexed in PubMed 2026-01-16.
   flag: "2026-01-16",
+  caseInsensitive: true,
 };
 
 export default challenge;

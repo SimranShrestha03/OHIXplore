@@ -12,7 +12,8 @@ We actually read this stuff and take your feedback comments seriously.
 **[👉 Take the online survey by using the following link] **
 
 https://tinyurl.com/OHI-Xplore`,
-  flag: "OHIX{TODO_survey_flag}",
+  flag: "OHI-Xplore_Flag",
+  caseInsensitive: true,
 };
 
 export default challenge;

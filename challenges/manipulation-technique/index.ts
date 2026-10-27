@@ -18,8 +18,7 @@ In GHIA's archives, every deception tactic has been documented. Every pattern ha
 *"When the same narrative is echoed by many voices, The people are left with very little choices. When the alignment of personal stories are too perfect, Then misinformation does rise in society to infect. When individual truths create collective deception, What do behavioral scientists call this manipulative action?"*
 
 **Submit the name of this manipulative action (as asked in the above question), as your flag here. This will be a first essential step as valuable info towards helping break the problem pattern here.**`,
-  // TODO confirm intended answer; any entry in the list is accepted.
-  flag: ["Astroturfing", "Manufactured Consensus", "Social Proof"],
+  flag: "emotional manipulation",
   caseInsensitive: true,
 };
 

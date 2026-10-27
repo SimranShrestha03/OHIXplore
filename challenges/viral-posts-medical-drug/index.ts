@@ -17,7 +17,8 @@ In March 2020, French researcher Didier Raoult published a small, methodological
 Trace the official record online to the day the authorized permission for using the above viral drug in the U.S. was revoked or withdrawn. When did the drug related viral claim lose its legal footing?
 
 That date, as referred to in the above question, is your flag here in the following format: **YYYY-MM-DD** (submit your answer only in this date format)`,
-  flag: "2020-06-15", // FDA revoked the hydroxychloroquine/chloroquine EUA on 15 June 2020
+  flag: "2020-06-15",
+  caseInsensitive: true,
 };
 
 export default challenge;
