@@ -67,19 +67,17 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
 
   return (
     <>
-      {[challenges.slice(0, 1), challenges.slice(1)].map((group, g) => (
-        <div key={g} className={g === 0 ? "grid-top" : "grid"}>
-          {group.map((c) => (
-            <a
-              key={c.slug}
-              href={`#${c.slug}`}
-              className={`tile${solved.includes(c.slug) ? " solved" : ""}`}
-            >
-              <span>{c.title}</span>
-            </a>
-          ))}
-        </div>
-      ))}
+      <div className="grid">
+        {challenges.map((c) => (
+          <a
+            key={c.slug}
+            href={`#${c.slug}`}
+            className={`tile${solved.includes(c.slug) ? " solved" : ""}`}
+          >
+            <span>{c.title}</span>
+          </a>
+        ))}
+      </div>
 
       {open && (
         <div className="modal-backdrop" onClick={close}>
