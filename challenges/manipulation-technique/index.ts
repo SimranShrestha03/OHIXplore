@@ -13,12 +13,16 @@ A fast-growing Facebook group claims to be a harmless "support community." No li
 
 Your task is to analyze the post structure and identify the manipulation technique, which is being used here.
 
+![Private Facebook group post and comments|480|block](/challenges/manipulation-technique/group-post.png)
+
 In GHIA's archives, every deception tactic has been documented. Every pattern has been named. The DN doesn't invent - they replicate what works.
 
 *"When the same narrative is echoed by many voices, The people are left with very little choices. When the alignment of personal stories are too perfect, Then misinformation does rise in society to infect. When individual truths create collective deception, What do behavioral scientists call this manipulative action?"*
 
-**Submit the name of this manipulative action (as asked in the above question), as your flag here. This will be a first essential step as valuable info towards helping break the problem pattern here.**`,
-  flag: "emotional manipulation",
+**Clue:** the technique is named after a brand of artificial grass, because the "grassroots" voices here only look real.
+
+**Submit the name of this manipulative action as your flag: a single word.**`,
+  flag: "astroturfing",
   caseInsensitive: true,
 };
 

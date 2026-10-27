@@ -14,6 +14,10 @@ In March 2020, French researcher Didier Raoult published a small, methodological
 
 Trace the official record online to the day the authorized permission for using the above viral drug in the U.S. was revoked or withdrawn. When did the drug related viral claim lose its legal footing?
 
+Not every government decision remains in effect forever. Some leave a paper trail long after they are withdrawn.
+
+https://www.fda.gov/emergency-preparedness-and-response/mcm-legal-regulatory-and-policy-framework/emergency-use-authorization-archived-information
+
 That date, as referred to in the above question, is your flag here in the following format: **YYYY-MM-DD** (submit your answer only in this date format)
 
 ![Press briefing|550|block](/challenges/viral-posts-medical-drug/press-briefing.png)`,
