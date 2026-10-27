@@ -103,6 +103,6 @@ button.btn { border: 0; cursor: pointer; font-family: inherit; }
 .results-actions { display: flex; align-items: center; justify-content: center; gap: 20px; }
 .reset-btn { background: none; border: 1px solid #3a4258; color: #9aa6c0; border-radius: 6px; padding: 10px 16px; cursor: pointer; }
 
-.grid-top { display: flex; justify-content: center; max-width: 1080px; margin: 70px auto 0; padding: 0 24px; width: 100%; }
-.grid-top .tile { width: 260px; }
+.grid-top { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px; max-width: 1080px; margin: 70px auto 0; padding: 0 24px; width: 100%; }
+.grid-top .tile { grid-column: 1; }
 .grid-top + .grid { margin-top: 18px; }
