@@ -1,13 +1,15 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { PublicChallenge } from "@/challenges/types";
 import Markdownish from "./Markdownish";
+import { STORE, readSolved } from "@/lib/progress";
 
 type Result = { status: string; message: string } | null;
-const STORE = "ohix-solved";
 
 export default function ChallengeBoard({ challenges }: { challenges: PublicChallenge[] }) {
+  const router = useRouter();
   const [open, setOpen] = useState<PublicChallenge | null>(null);
   const [solved, setSolved] = useState<string[]>([]);
   const [flag, setFlag] = useState("");
@@ -15,9 +17,7 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    try {
-      setSolved(JSON.parse(localStorage.getItem(STORE) || "[]"));
-    } catch {}
+    setSolved(readSolved());
     const fromHash = () => {
       const slug = location.hash.slice(1);
       setOpen(challenges.find((c) => c.slug === slug) ?? null);
@@ -36,8 +36,10 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
 
   const idx = open ? challenges.findIndex((c) => c.slug === open.slug) : -1;
   const nextChallenge = idx >= 0 ? challenges[idx + 1] : undefined;
+  const allSolved = challenges.every((c) => solved.includes(c.slug));
   const goNext = () => {
-    if (nextChallenge) location.hash = nextChallenge.slug;
+    if (allSolved && !nextChallenge) router.push("/results");
+    else if (nextChallenge) location.hash = nextChallenge.slug;
     else close();
   };
 
@@ -65,17 +67,19 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
 
   return (
     <>
-      <div className="grid">
-        {challenges.map((c) => (
-          <a
-            key={c.slug}
-            href={`#${c.slug}`}
-            className={`tile${solved.includes(c.slug) ? " solved" : ""}`}
-          >
-            <span>{c.title}</span>
-          </a>
-        ))}
-      </div>
+      {[challenges.slice(0, 1), challenges.slice(1)].map((group, g) => (
+        <div key={g} className={g === 0 ? "grid-top" : "grid"}>
+          {group.map((c) => (
+            <a
+              key={c.slug}
+              href={`#${c.slug}`}
+              className={`tile${solved.includes(c.slug) ? " solved" : ""}`}
+            >
+              <span>{c.title}</span>
+            </a>
+          ))}
+        </div>
+      ))}
 
       {open && (
         <div className="modal-backdrop" onClick={close}>
@@ -113,7 +117,7 @@ export default function ChallengeBoard({ challenges }: { challenges: PublicChall
                 {result.status === "correct" ? "Correct! You did it! 🎉" : result.message}
                 {result.status === "correct" && (
                   <button className="next-btn" onClick={goNext}>
-                    {nextChallenge ? "Next Challenge →" : "Back to Challenges"}
+                    {nextChallenge ? "Next Challenge →" : allSolved ? "View Results →" : "Back to Challenges"}
                   </button>
                 )}
               </div>

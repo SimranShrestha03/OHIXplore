@@ -9,8 +9,6 @@ const challenge: Challenge = {
 
 The Distortion Network (DN) is weaponizing health misinformation for control.
 
-You are Agent VERITY, who is recruited by the Global Health Intelligence Agency (GHIA), as the last line of defense to stop the spread of health misinformation.
-
 **Find the source. Break the enemy (DN). Bring out the truth.**
 
 DN doesn't start things with chaos. They play with human belief and emotions.
