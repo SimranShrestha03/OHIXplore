@@ -9,7 +9,7 @@ const challenge: Challenge = {
 
 We actually read this stuff and take your feedback comments seriously.
 
-**[👉 Take the online survey by using the following link] **
+**Take the online survey by using the link below:**
 
 https://tinyurl.com/OHI-Xplore`,
   flag: "OHI-Xplore_Flag",
